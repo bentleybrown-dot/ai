@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Color Mixer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <h1>Hex Color Mixer</h1>
+    <div class="row controls-row">
+      <label>
+        Colour input 1
+        <input id="color1" type="text" placeholder="#RRGGBB" value="#ff0000" maxlength="7" />
+      </label>
+      <label>
+        Colour input 2
+        <input id="color2" type="text" placeholder="#RRGGBB" value="#0000ff" maxlength="7" />
+      </label>
+    </div>
+
+    <div class="row">
+      <button id="mixButton">Give results</button>
+    </div>
+
+    <div class="row result-row">
+      <p>Result of mixing hexcode:</p>
+      <output id="resultHex">#000000</output>
+    </div>
+
+    <div class="row">
+      <div id="resultSwatch" class="swatch" aria-label="Mixed colour result"></div>
+    </div>
+
+    <div class="row gradient-row">
+      <div class="gradient-box" id="gradientDisplay" aria-label="Gradient from colour input 1 through result to colour input 2"></div>
+    </div>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

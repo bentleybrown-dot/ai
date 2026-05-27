@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  color: #111;
+  background: linear-gradient(135deg, rgb(240, 248, 255), rgb(216, 234, 248));
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+}
+
+.app-shell {
+  width: min(100%, 520px);
+  padding: 28px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 24px 80px rgba(19, 40, 73, 0.12);
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: clamp(1.8rem, 2.4vw, 2.4rem);
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.controls-row {
+  flex-direction: row;
+  gap: 14px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  font-weight: 600;
+}
+
+input {
+  padding: 14px 16px;
+  border: 1px solid rgba(34, 63, 95, 0.18);
+  border-radius: 14px;
+  font-size: 1rem;
+  outline: none;
+}
+
+button {
+  padding: 14px 20px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover,
+button:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 32px rgba(13, 110, 253, 0.2);
+}
+
+.result-row {
+  align-items: flex-start;
+  gap: 8px;
+}
+
+output {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: #f4f7fb;
+  border: 1px solid rgba(16, 24, 40, 0.08);
+  font-family: monospace;
+}
+
+.swatch,
+.gradient-box {
+  min-height: 120px;
+  border-radius: 20px;
+  border: 1px solid rgba(16, 24, 40, 0.08);
+}
+
+.gradient-box {
+  background: linear-gradient(90deg, #ff0000, #800080, #0000ff);
+}
+
+@media (max-width: 520px) {
+  .controls-row {
+    flex-direction: column;
+  }
+}
